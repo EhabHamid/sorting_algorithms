@@ -15,7 +15,7 @@
  * @prev: comment
  * @next: comment
  */
- 
+
 typedef struct listint_s
 {
 	const int n;
@@ -30,7 +30,7 @@ typedef struct listint_s
  * @false: comment
  * @true: comment
  */
- 
+
 typedef enum bool
 {
 	false = 0,
