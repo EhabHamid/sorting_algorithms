@@ -1,12 +1,11 @@
 #include "sort.h"
 
 /**
- * ff_isp_mot - fun comment
- * @a: ref comment
- * @b: ref comment
+ * swap_ints - Swap two integers in an array.
+ * @a: The first integer to swap.
+ * @b: The second integer to swap.
  */
-
-void ff_isp_mot(int *a, int *b)
+void swap_ints(int *a, int *b)
 {
 	int tmp;
 
@@ -15,23 +14,21 @@ void ff_isp_mot(int *a, int *b)
 	*b = tmp;
 }
 
-
-
 /**
- * bubble_sort - fun comment
- * @array: ref comment
- * @size: reg comment
- * Description: dis comment
+ * bubble_sort - Sort an array of integers in ascending order.
+ * @array: An array of integers to sort.
+ * @size: The size of the array.
+ *
+ * Description: Prints the array after each swap.
  */
-
 void bubble_sort(int *array, size_t size)
 {
+	size_t i, len = size;
 	bool bubbly = false;
-	size_t len = size;
-	size_t i;
 
 	if (array == NULL || size < 2)
 		return;
+
 	while (bubbly == false)
 	{
 		bubbly = true;
@@ -39,7 +36,7 @@ void bubble_sort(int *array, size_t size)
 		{
 			if (array[i] > array[i + 1])
 			{
-				ff_isp_mot(array + i, array + i + 1);
+				swap_ints(array + i, array + i + 1);
 				print_array(array, size);
 				bubbly = false;
 			}
@@ -47,4 +44,3 @@ void bubble_sort(int *array, size_t size)
 		len--;
 	}
 }
-
